@@ -2,6 +2,8 @@
          fonts
    ===================== */
 
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap");
+
 /* =====================
          utilities
    ===================== */
@@ -19,5 +21,129 @@
 }
 
 :root {
+  --main-color: #009688;
   --white-color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.banner__button {
+  margin: 70px auto 0;
+}
+
+.banner__button a {
+  text-decoration: none;
+  color: var(--white-color);
+  border: 0.5px solid var(--white-color);
+  width: 150px;
+  margin: 0 10px;
+  padding: 12px 0;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: color 0.5s ease-in;
+}
+
+.banner__button a span {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white-color);
+  z-index: -1;
+  transition: width 0.5s ease-in;
+  border-radius: 12px;
+}
+
+.banner__button a:hover span {
+  width: 100%;
+}
+
+.banner__button a:hover {
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+/* =====================
+         header css
+   ===================== */
+
+header {
+  background-image: linear-gradient(#00000080, var(--main-color)),
+    url("../images/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.logo {
+  width: 140px;
+  position: absolute;
+  top: 4%;
+  left: 10%;
+}
+
+#side__nav {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: var(--main-color);
+  z-index: 2;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin: 50px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+#menu__button {
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  border-radius: 3px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+#menu__button img {
+  width: 20px;
+  margin-top: 15px;
+}
+
+.banner__text {
+  color: var(--white-color);
+  text-align: center;
+  padding-top: 180px;
+}
+
+.banner__text h1 {
+  font-size: 130px;
+  font-family: "Kaushan Script", cursive;
+}
+
+.banner__text p {
+  font-size: 20px;
+  font-style: italic;
 }
